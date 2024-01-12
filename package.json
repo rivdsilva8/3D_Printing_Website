@@ -18,6 +18,9 @@
     "express-handlebars": "^7.1.2",
     "express-session": "^1.17.3",
     "mongo": "^0.1.0",
-    "mongodb": "^6.3.0"
+    "mongodb": "^6.3.0",
+    "validator": "^13.11.0",
+    "xss": "^1.0.14",
+    "xxs": "^0.0.1"
   }
 }

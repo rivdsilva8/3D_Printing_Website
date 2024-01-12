@@ -1,0 +1,31 @@
+<form action="/login" method="POST">
+  <div id="error-container" style="display: none;">{{#if
+      error
+    }}{{error}}{{/if}}</div>
+  <label for="email">Email</label>
+  <input
+    type="text"
+    id="email"
+    name="email"
+    placeholder="Please enter your email"
+  />
+  <label for="password">Password</label>
+  <input
+    type="password"
+    id="password"
+    name="password"
+    placeholder="create your password"
+  />
+  <button type="submit">Login</button>
+</form>
+
+<div>Dont have an account?
+  <a href="/register">Create an account</a></div><br />
+<div>Forgot Password?
+  <a href="/reset">Reset Here</a>
+</div>
+<footer>
+  <a href="/">Back to home</a>
+</footer>
+<script src="/public/js/client_side_validation.js"></script>
+<script src="/public/js/main.js"></script>

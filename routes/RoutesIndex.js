@@ -1,5 +1,6 @@
-import adminRoutes from "./admin/index.js";
+// import adminRoutes from "./admin/index.js";
 import userRoutes from "./user/index.js";
+import alienRoutes from "./alien.js";
 
 const constructorMethod = (app) => {
   app.get("/", (req, res) => {
@@ -8,9 +9,9 @@ const constructorMethod = (app) => {
     });
   });
 
-  //admin routes
-  app.use("/guest", guestRoutes);
-  app.use("/admin", adminRoutes);
+  app.use("/", alienRoutes);
+  app.use("/user", userRoutes);
+  // app.use("/admin", adminRoutes);
 
   app.use("*", (req, res) => {
     res.render("error", {
@@ -21,5 +22,4 @@ const constructorMethod = (app) => {
     });
   });
 };
-
 export default constructorMethod;
